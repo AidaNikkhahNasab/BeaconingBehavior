@@ -1,0 +1,47 @@
+\setkomafont{title}{\huge \scshape}
+\begin{titlepage}
+\begin{center}
+	{\usekomafont{subject}
+	Technische Hochschule Deggendorf\\
+	Fakultät \faculty\par}
+	\vspace{.2cm}
+{\Large Studiengang \studies\\}
+\vspace{6\baselineskip}
+{\Huge\usekomafont{title}\thesistitleDE\par}
+\vspace{1cm}
+{\Huge\usekomafont{title}\thesistitleEN\par}
+\vspace{6\baselineskip}
+
+\usekomafont{publishers}
+Masterarbeit zur Erlangung des akademischen Grades:
+
+	\vspace{.2cm}
+	\emph{\degree}
+	\vspace{.2cm}
+
+an der Technischen Hochschule Deggendorf\\
+\end{center}
+\vfill
+\parbox[t]{.4\textwidth}{\usekomafont{author}
+	Vorgelegt von:\\
+	\student\\
+	Matrikelnummer: \matrnr\par
+	\ifdefined\stammnr
+	Stammnummer: \stammnr\par
+	\fi
+	\vspace{\baselineskip}
+	Am: \submissiondate\par
+}
+\hfill
+\parbox[t]{.4\textwidth}{\usekomafont{author}
+Prüfungsleitung:\\
+\supervisor%
+
+\ifthenelse{\equal{\secsupervisor}{}}{}
+{%
+\vspace{\baselineskip}
+Ergänzende Prüfende:\\
+\secsupervisor%
+}}
+\end{titlepage}
+\cleardoublepage\par

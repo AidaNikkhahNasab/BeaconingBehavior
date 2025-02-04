@@ -1,0 +1,113 @@
+\documentclass[a4paper]{scrbook}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{relsize}
+\usepackage[colorlinks=false, pdfborder={0 0 0}]{hyperref}
+\usepackage{libertine}
+\usepackage{ifthen}
+% \usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{scrhack}
+
+
+% Define colors
+\definecolor{numb}{rgb}{0.58,0,0.82}
+\definecolor{punct}{rgb}{0.3,0.3,0.3}
+\definecolor{delim}{rgb}{0.6,0.6,0.6}
+
+
+% Define JSON language for listings
+\lstdefinelanguage{json}{
+  basicstyle=\ttfamily,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  stepnumber=1,
+  numbersep=8pt,
+  showstringspaces=false,
+  breaklines=true,
+  frame=lines,
+  backgroundcolor=\color{lightgray},
+  literate=
+   *{0}{{{\color{numb}0}}}{1}
+    {1}{{{\color{numb}1}}}{1}
+    {2}{{{\color{numb}2}}}{1}
+    {3}{{{\color{numb}3}}}{1}
+    {4}{{{\color{numb}4}}}{1}
+    {5}{{{\color{numb}5}}}{1}
+    {6}{{{\color{numb}6}}}{1}
+    {7}{{{\color{numb}7}}}{1}
+    {8}{{{\color{numb}8}}}{1}
+    {9}{{{\color{numb}9}}}{1}
+    {:}{{{\color{punct}{:}}}}{1}
+    {,}{{{\color{punct}{,}}}}{1}
+    {\{}{{{\color{delim}{\{}}}}{1}
+    {\}}{{{\color{delim}{\}}}}}{1}
+    {[}{{{\color{delim}{[}}}}{1}
+    {]}{{{\color{delim}{]}}}}{1},
+}
+
+\newcommand{\numb}[1]{\textcolor{blue}{#1}}
+\newcommand{\punct}[1]{\textcolor{red}{#1}}
+\newcommand{\delim}[1]{\textcolor{orange}{#1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Replace these values
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\thesistitleDE}{Erkennung von bösartigem Netzwerkverhalten in Allianz-Unternehmensnetzwerkdaten}
+\newcommand{\thesistitleEN}{Detection of Malicious Network Behavior in Allianz Company Network Data}
+\newcommand{\student}{Aida Nikkhah Nasab}
+\newcommand{\matrnr}{22208964}
+ %\newcommand{\stammnr}{234567} % Unset this variable if you only have a (single) matriculation number
+\newcommand{\submissiondate}{March 2025}
+\newcommand{\supervisor}{Prof.~Dr.~Fischer}
+ \newcommand{\secsupervisor}{Zineddine Bettouche} % Unset this variable if no second supervisor is required
+\newcommand{\faculty}{Angewandte Informatik}
+
+% Select your course of studies here
+%\newcommand{\studies}{Bachelor Cybersecurity}
+%\newcommand{\studies}{Bachelor Künstliche Intelligenz}
+%\newcommand{\studies}{Bachelor Angewandte Informatik}
+\newcommand{\studies}{Master Angewandte Informatik}
+%\newcommand{\studies}{Bachelor Elektro- und Informationstechnik}
+%\newcommand{\studies}{Master Elektro- und Informationstechnik}
+%\newcommand{\studies}{Bachelor Medientechnik}
+%\newcommand{\studies}{Master Medientechnik}
+%\newcommand{\studies}{Master of Applied Research}
+
+% Select the targeted degree here
+%\newcommand{\degree}{Bachelor of Engineering (B.Eng.)}
+\newcommand{\degree}{Master of Engineering (M.Eng.)}
+%\newcommand{\degree}{Master of Science (M.Sc.)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand*{\UrlFont}{\ttfamily\smaller\relax}
+
+\begin{document}
+\pagestyle{headings}
+\pagenumbering{roman}
+\input{../Thesis_Docs/sources/title.tex}
+
+\input{../Thesis_Docs/sources/declaration.tex}
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+This thesis offers a comprehensive examination of the BAYWATCH framework, an advanced system designed for monitoring, detecting, and analyzing data patterns, applied to both real-world and synthetic datasets. The research delves into the theoretical underpinnings of BAYWATCH, outlining its algorithmic architecture, essential components, and the innovative methods it utilizes for real-time anomaly detection and data pattern recognition. Through a systematic evaluation, the study assesses the framework’s performance in controlled experimental settings and its effectiveness in complex, real-world scenarios. The findings indicate that BAYWATCH not only exhibits robust performance and adaptability across diverse data environments but also reveals significant sensitivity to parameter configurations and noise factors present in live datasets. Furthermore, a comparative analysis with existing methodologies highlights BAYWATCH’s strengths and identifies areas for optimization. The insights gained from this research contribute to a deeper understanding of data monitoring systems and offer practical recommendations for future improvements, thereby advancing the application of intelligent data analysis techniques in both academic research and industry practice.
+
+
+\tableofcontents
+
+\cleardoublepage%
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\input{../Thesis_Docs/main.tex}
+
+\bibliographystyle{IEEEtran}
+\bibliography{../Thesis_Docs/sources/references}
+\end{document}
